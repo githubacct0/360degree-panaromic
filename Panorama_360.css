@@ -1,0 +1,343 @@
+/* __V3D_TEMPLATE__ - template-based file; delete this line to prevent this file from being updated */
+
+body {
+  margin: 0px;
+  overflow: hidden;
+}
+
+#v3d-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.fullscreen-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-size: 100% 100%;
+  display: none;
+  z-index: 1;
+}
+
+.fullscreen-open {
+  background-image: url("media/fullscreen_open.svg");
+}
+
+.fullscreen-close {
+  background-image: url("media/fullscreen_close.svg");
+}
+
+/* removes tap blinking on ios devices */
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+body {
+  font-family: sans-serif;
+  line-height: 1;
+}
+li {
+  list-style-type: none;
+}
+.search-name-list {
+    margin-left: 50px;
+}
+.search-btn-wrap {
+  position: absolute;
+  top: 30px;
+  left: 60px;
+  background: #ccc;
+  width: 55px;
+  height: 55px;
+  z-index: 1;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+.search-btn-wrap img {
+  transition: all 0.5s;
+}
+.search-btn-wrap:hover {
+  background: #3a3a3a;
+  cursor: pointer;
+}
+.search-btn-wrap:hover .search-btn-img {
+  transform: scale(1.1);
+}
+.search-overlay {
+  background-color: #dedede;
+  opacity: 0.6;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 50%;
+  height: 100vh;
+  transform: translateX(-100%);
+}
+.search-wrap {
+  width: 50%;
+  height: 100vh;
+  position: absolute;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+  padding: 30px;
+  transform: translateX(-100%);
+}
+.search-wrap-animate {
+  animation: leftAnim ease 1s;
+  animation-fill-mode: forwards;
+}
+.search-wrap-animate-delete {
+  animation: leftAnimDelelete ease 1s;
+}
+.search-area {
+  background-image: url("search.svg");
+  background-repeat: no-repeat;
+  background-color: #878787;
+  background-position: 15px center;
+  color: #fff;
+  border-radius: 15px;
+  height: 50px;
+  width: 80%;
+  padding-left: 50px;
+  font-size: 18px;
+  transition: all 0.5s;
+}
+.search-area:focus {
+  background-image: none;
+}
+.search-area:focus::placeholder {
+  position: absolute;
+}
+.search-area::placeholder {
+  color: #fff;
+  transition: all 0.5s;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.search-close-icon {
+  width: 25px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: all 0.5s;
+}
+.search-close-icon:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.search-name-list {
+  margin-top: 10px;
+}
+.search-name-list ul li {
+  font-size: 18px;
+  margin: 15px 0 15px 0;
+}
+.name-overlay {
+  background-color: #3a3a3a;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 40%;
+  height: 100vh;
+  transform: translateX(120%);
+}
+.name-wrap {
+  width: 40%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  color: #fff;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  padding: 30px;
+  transform: translateX(110%);
+}
+.name-wrap-animate {
+  animation: rightAnim ease 1s;
+  animation-fill-mode: forwards;
+}
+.name-wrap-animate-delete {
+  animation: nameWrapDelete ease 1s;
+  animation-fill-mode: forwards;
+}
+.name-subscribe {
+  width: 80%;
+  text-align: center;
+  position: relative;
+}
+.name-subscribe h2 {
+  margin: 10px 0 10px 0;
+}
+.name-subscribe h2:first-child {
+  font-size: 50px;
+}
+.name-subscribe h2:last-child {
+  font-size: 35px;
+}
+.name-subscribe:after {
+  content: "";
+  width: 100%;
+  border: 1px solid #fff;
+  position: absolute;
+  background-color: #fff;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+}
+.name-subscribe-quot {
+  margin: 40px 0 40px 0;
+  width: 70%;
+}
+.name-subscribe-quot p {
+  font-size: 20px;
+  text-align: left;
+}
+.gps-date-wrap {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.gps-icon {
+  width: 40px;
+  fill: #fff;
+  margin-left: -5px;
+}
+.clock-icon {
+  width: 30px;
+  fill: #fff;
+}
+.gps-wrap,
+.clock-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0 15px 0;
+}
+.gps-wrap span,
+.clock-wrap span {
+  margin-left: 10px;
+  font-size: 18px;
+}
+.prev-next-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 30px 0 30px 0;
+}
+.arrow {
+  fill: #fff;
+}
+.volume-wrap {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  z-index: 1;
+}
+.volume-wrap img {
+  width: 40px;
+  margin: 5px;
+  transition: all 0.5s;
+}
+.volume-wrap img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.prev-wrap,
+.next-wrap {
+  transition: all 0.5s;
+}
+.prev-wrap:hover,
+.next-wrap:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.name-wrap-close {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: 1;
+  transition: all 0.5s;
+}
+.name-wrap-icon-close {
+  width: 30px;
+}
+.name-wrap-close:hover {
+  transform: scale(1.1);
+}
+#volume-up {
+    display: block;
+}
+#volume-mute {
+    display: none;
+}
+@keyframes leftAnim {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes rightAnim {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes leftAnimDelelete {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes nameWrapDelete {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
