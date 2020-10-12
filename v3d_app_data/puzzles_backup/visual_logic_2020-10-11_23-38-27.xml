@@ -57,7 +57,7 @@
         </block>
       </statement>
       <statement name="DO_END">
-        <block type="setHTMLElemStyle" id="c2;!sn,T{^IS8:i`XFX:">
+        <block type="setHTMLElemStyle" id="c2;!sn,T{^IS8:i`XFX:" disabled="true">
           <field name="PROPERTY">display</field>
           <field name="PARENT">FALSE</field>
           <value name="VALUE">

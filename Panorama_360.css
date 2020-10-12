@@ -341,3 +341,169 @@ li {
     transform: translateX(100%);
   }
 }
+
+
+
+.preloader-screen {
+  position: fixed;
+  z-index: 99999;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #f7f7f7;
+  color:#2b2b2b;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.preloader-scooter-background {
+  position: absolute;
+    display: block;
+    overflow: hidden;
+    width: 600px;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0px;
+    right: 0px;
+    top: 20%;
+    z-index: 999;
+}
+.loading-text {
+    display: block;
+  margin-top: 100%;
+  margin-bottom: 12px;
+  font-family: Barlowcondensed, sans-serif;
+  color:#2b2b2b;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+.l_bar {
+  width:0%;
+  margin:1em auto;
+  border:none;
+  height: 4px;
+  background:#cca23e;
+}
+.l_img{
+  position: absolute;
+  width: 600px;
+  display: block;
+}
+
+.main_text {
+  font-size: 36px;
+}
+@media only screen and (max-device-height:768px) {
+  .preloader-screen {
+    position: fixed;
+    z-index: 99999;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #f7f7f7;
+    color:#2b2b2b;
+  }
+  
+  .section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .preloader-scooter-background {
+    position: absolute;
+      display: block;
+      overflow: hidden;
+      width: 30%;
+      height: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      left: 0px;
+      right: 0px;
+      bottom: -200px;
+      z-index: 999;
+  }
+  .loading-text {
+    display: block;
+    margin-top: 100%;
+    margin-bottom: 12px;
+    font-family: Barlowcondensed, sans-serif;
+    color: #2b2b2b;
+    font-weight: 700;
+    text-align: center;
+  }
+  .l_bar {
+    width:0%;
+    margin:1em auto;
+    border:none;
+    height: 4px;
+    background:#cca23e;
+  }
+  .l_img{
+    position: absolute;
+    width: 100%;
+    display: block;
+  }
+  .main_text {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-device-width:480px) {
+  .preloader-screen {
+    position: fixed;
+    z-index: 99999;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #f7f7f7;
+    color:#2b2b2b;
+  }
+  
+  .section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .preloader-scooter-background {
+    position: absolute;
+      display: block;
+      overflow: hidden;
+      width: 80%;
+      height: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      left: 0px;
+      right: 0px;
+      bottom: -200px;
+      z-index: 999;
+  }
+  .loading-text {
+    display: block;
+    margin-top: 100%;
+    margin-bottom: 12px;
+    font-family: Barlowcondensed, sans-serif;
+    color: #2b2b2b;
+    font-weight: 700;
+    text-align: center;
+  }
+  .l_bar {
+    width:0%;
+    margin:1em auto;
+    border:none;
+    height: 4px;
+    background:#cca23e;
+  }
+  .l_img{
+    position: absolute;
+    width: 100%;
+    display: block;
+  }
+  .main_text {
+    font-size: 22px;
+  }
+}
